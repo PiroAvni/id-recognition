@@ -13,3 +13,7 @@ body {
 button{
   cursor: pointer;
 }
+.rank-container{
+  top:-100px;
+
+}

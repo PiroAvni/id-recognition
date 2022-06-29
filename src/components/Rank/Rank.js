@@ -3,7 +3,7 @@ import React from 'react';
 
 const Rank= ()=> {
     return (
-       <div >
+       <div className ='rank-container' >
           <div className=' white f3'>
             {'Avni, Your current Rank is .....'}
           </div>
