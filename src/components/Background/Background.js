@@ -1,9 +1,11 @@
+/** @format */
+
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
 const BackgroundParticles = () => {
   const particlesInit = async (main) => {
-    console.log(main);
+    //console.log(main);
 
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
     // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -12,10 +14,11 @@ const BackgroundParticles = () => {
   };
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    // console.log(container);
   };
   return (
-    <Particles className="particles"
+    <Particles
+      className="particles"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -93,4 +96,4 @@ const BackgroundParticles = () => {
   );
 };
 
-export default BackgroundParticles
+export default BackgroundParticles;
