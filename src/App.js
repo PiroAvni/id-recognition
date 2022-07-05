@@ -89,7 +89,9 @@ class App extends Component {
           })
             .then((response) => response.json())
             .then((count) => {
-              this.setState(Object.assign(this.state.user, { entries: count }));
+              this.setState(
+                Object.assign(this.state.user, { enteries: count })
+              );
             });
         }
         this.displayFaceBox(this.calculateFaceLocation(response));
@@ -119,7 +121,7 @@ class App extends Component {
           <div>
             <Rank
               name={this.state.user.name}
-              entries={this.state.user.entries}
+              enteries={this.state.user.enteries}
             />
             <ImageLinkForm
               onInputChange={this.onInputChange}
