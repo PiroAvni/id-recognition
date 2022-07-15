@@ -77,7 +77,7 @@ class App extends Component {
     this.setState({ imageUrl: this.state.input });
     app.models
       .predict(Clarifai.FACE_DETECT_MODEL, this.state.input)
-      .then((response) => {
+      .then(response => {
         console.log("Hi", response);
         if (response) {
           fetch("http://localhost:3000/image", {
@@ -87,8 +87,8 @@ class App extends Component {
               id: this.state.user.id,
             }),
           })
-            .then((response) => response.json())
-            .then((count) => {
+            .then(response => response.json())
+            .then(count => {
               this.setState(
                 Object.assign(this.state.user, { enteries: count })
               );
